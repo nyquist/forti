@@ -26,5 +26,29 @@ When Fortigates used Fortiguard for DNS request, it defaults to using DoT (DNS o
 
 All Fortiguard services use 3rd party SSL certificate check and OCSP stapling check.
 
-Fortiguard services by default use anycast.
+Fortiguard services by default use anycast.&#x20;
+
+## Basics
+
+**VDOMs** (Virtual Domains) is a feature that allows the partition of a physical firewall into multiple virtual firewalls with their own security policies, routing tables, interfaces. By default, FortiGate supports 10 VDOMs. Higher-end models can be licensed for additional VDOMs.
+
+**Interface Roles** are used to limit the configuring options in GUI based on the role of the interrface. The "Undefined" option shows all settings.
+
+FortiGate adminstration can be performed via CLI or GUI. Users have associated **user profiles** that contain the permisions.&#x20;
+
+* "super-admin" profile is used by the default "admin" user and gives full access to everything. It can't be deleted.
+* "prof-admin" profile also provides full access, but only to the VDOMs
+
+### Configuration Backups
+
+Configurations can be backed up from GUI using default format. When encryption is enabled, the entire file is encrypted with a password that is provided when it is created. The file can only be restored on a device with the same model and OS version.
+
+When encryption is not enabled, the sensitive information (passwords, preshared-keys) are hashed in order to be obfuscated. When restoring from a non-encrypted backup, only the model must match.
+
+Config can be backed up to a remote location using default fortigate format or the yaml format:
+
+```
+execute backup yaml-config {ftp|tftp} FILENAME SERVER [USERNAME [PASSWORD]]
+execute restore yaml-config {ftp|tftp} FILENAME SERVER [USERANME [PASSWORD]]
+```
 
