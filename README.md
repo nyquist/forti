@@ -39,6 +39,8 @@ FortiGate adminstration can be performed via CLI or GUI. Users have associated *
 * "super-admin" profile is used by the default "admin" user and gives full access to everything. It can't be deleted.
 * "prof-admin" profile also provides full access, but only to the VDOMs
 
+Resetting a lost admin password can be performed when there is physical access to the device, using the "maintainer" account which can be used only for the first 60 seconds after boot (varies by model). The password is "bcpb\<SERIAL-NUMBER>".
+
 ### Configuration Backups
 
 Configurations can be backed up from GUI using default format. When encryption is enabled, the entire file is encrypted with a password that is provided when it is created. The file can only be restored on a device with the same model and OS version.
