@@ -1,56 +1,56 @@
-# Fortinet Basics
+# Firewall Policies
 
-## Default Settings&#x20;
+A Firewall Policy is a set of rules that define which traffic matches each rule and how the matching traffic is processed. The rules are processed from top to bottom and the traffic is processed by the first matching rule. If no match is found, the traffic is dropped by the "Implicit deny" rule.&#x20;
 
-* Default IP: 192.168.1.99/24
-  * On entry-level boxes, the default IP is configured on the "Internal" interface or "Port 1". DHCP Server is also enabled
-  * On mid-range and high-end boxes, the default IP is configured on the "MGMT" interface
-* Default User: "admin"
-* Default Password: ""
+To see what matches a rule, the firewall looks at:
 
-Console port gives direct access to the device
+* **incoming interface**
+* **outgoing interface**
+* **source**
+  * Address Object
+  * User
+  * ISDB
+* **destination**
+  * Address Object
+  * ISDB
+* **service**
+* **schedule**
 
-## Foritguard Subscription Services
+The action for each rule is either:
 
-Fortiguard Subscription Services are provided by Fortiguard Distribution Network.&#x20;
+* **DENY**: session is dropped
+* **ACCEPT**: allows the session and if configured enables additional policies to be processed (authentication, NAT, L7 filtering)
 
-* Fortigate asks FDN everytime it performs webfiltering, DNS filtering or spam checking.&#x20;
-* Fortigate downloads antivirus and IPS data regularly (once a day)
+**Users** can authenticate&#x20;
 
-Fortigate can access Fortiguard services using:
+* localy - authentication is performed on the FortiGate, user is presented with a user and password prompt, when supported.
+* remotely (LDAP, RADIUS) - authentication is performed is verified on the authentication server.  User is presented with a user and password prompt when supported.
+* remotely through FSSO (Fortinet Single Sign-On) where the access is granted based on the domain contgroller group information. User is not presented with a user and password prompt.
 
-* UDP (53, 8888) to service.fortiguard.net
-* HTTPS (53,443, 8888) to securefw.fortiguard.net
+An **Address Object** can be:
 
-When Fortigates used Fortiguard for DNS request, it defaults to using DoT (DNS over TLS)
+* **IP Address**
+* **Subnet**
+* **IP Range**
+* **FQDN**
+* **Geography** - a list of IP Addresses, maintained by Fortiguard which are allocated to locations on the globe, based on Region, Country, City
+* **ISDB** - is a list of IP Addresses, maintained by FortiGuard for well known internet services (AWS, Amazon, Google, Facebook)
+  * **Geographic ISDB** is a subset of ISDB based on Region, Country, City
+* **Dynamic** (Fabric Connector Address)
+* **MAC Address Range** (for source only)
 
-All Fortiguard services use 3rd party SSL certificate check and OCSP stapling check.
+Schedule can be:
 
-Fortiguard services by default use anycast.&#x20;
+* recurring
+* one-time: has a specified start and end date.
 
-## Basics
+**Services** are Protocols (TCP, UDP, ICMP, other) and port combinations (when it applies).
 
-**VDOMs** (Virtual Domains) is a feature that allows the partition of a physical firewall into multiple virtual firewalls with their own security policies, routing tables, interfaces. By default, FortiGate supports 10 VDOMs. Higher-end models can be licensed for additional VDOMs.
+A UUID is created for each firewall policy and firewall object at creation time for easier tracking.  Policy ID is a number value which is assigned at system creation. They are not displayed by default in GUI but it is the identifier used to modify the policy in the CLI. &#x20;
 
-**Interface Roles** are used to limit the configuring options in GUI based on the role of the interrface. The "Undefined" option shows all settings.
+### Logging
 
-FortiGate adminstration can be performed via CLI or GUI. Users have associated **user profiles** that contain the permisions.&#x20;
+A log is created when a sesssion is closed. You can additional add a log message when a session starts.&#x20;
 
-* "super-admin" profile is used by the default "admin" user and gives full access to everything. It can't be deleted.
-* "prof-admin" profile also provides full access, but only to the VDOMs
-
-Resetting a lost admin password can be performed when there is physical access to the device, using the "maintainer" account which can be used only for the first 60 seconds after boot (varies by model). The password is "bcpb\<SERIAL-NUMBER>".
-
-### Configuration Backups
-
-Configurations can be backed up from GUI using default format. When encryption is enabled, the entire file is encrypted with a password that is provided when it is created. The file can only be restored on a device with the same model and OS version.
-
-When encryption is not enabled, the sensitive information (passwords, preshared-keys) are hashed in order to be obfuscated. When restoring from a non-encrypted backup, only the model must match.
-
-Config can be backed up to a remote location using default fortigate format or the yaml format:
-
-```
-execute backup yaml-config {ftp|tftp} FILENAME SERVER [USERNAME [PASSWORD]]
-execute restore yaml-config {ftp|tftp} FILENAME SERVER [USERANME [PASSWORD]]
-```
+During a session, if a security profile detects a violation, fortigate will log it immediately.
 
