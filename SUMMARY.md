@@ -2,5 +2,5 @@
 
 ## Fortinet
 
-* [Firewall Policies](README.md)
-* [Fortinet Basics](fortinet/fortinet-basics.md)
+* [Fortinet Basics](README.md)
+* [Firewall Policies](<README (1).md>)
