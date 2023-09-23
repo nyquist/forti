@@ -1,12 +1,12 @@
 # Table of contents
 
-## Fortinet
+## Management
 
-* [Fortinet Basics](README.md)
-* [Firewall Policies](<README (1).md>)
+* [System Basics](README.md)
 
-## NAT
+## Firewall Policies
 
-* [NAT Modes](nat/nat-modes.md)
-* [SNAT](nat/snat.md)
-* [DNAT](nat/dnat.md)
+* [Firewall 101](firewall-policies/firewall-101.md)
+* [NAT](firewall-policies/nat/README.md)
+  * [SNAT](firewall-policies/nat/snat.md)
+  * [DNAT](firewall-policies/nat/dnat.md)
