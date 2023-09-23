@@ -1,8 +1,10 @@
 # Table of contents
 
+* [Table of Contents](README.md)
+
 ## Management
 
-* [System Basics](README.md)
+* [System Basics](<README (1).md>)
 
 ## Firewall Policies
 
