@@ -13,7 +13,12 @@
 * [NAT](firewall-policies/nat/README.md)
   * [SNAT](firewall-policies/nat/snat.md)
   * [DNAT](firewall-policies/nat/dnat.md)
+* [User Authentication](firewall-policies/user-authentication/README.md)
+  * [Certificate-Based User Authentication](firewall-policies/user-authentication/certificate-based-user-authentication.md)
 
-***
+## NGFW
 
-* [User Authentication](user-authentication.md)
+* [SSL Inspection](ngfw/ssl-inspection/README.md)
+  * [Certificates](ngfw/ssl-inspection/certificates.md)
+  * [SSL to a Web Server](ngfw/ssl-inspection/ssl-to-a-web-server.md)
+  * [SSL to a Web Server](ngfw/ssl-inspection/ssl-to-a-web-server-1.md)
