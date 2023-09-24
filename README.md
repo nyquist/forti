@@ -2,8 +2,8 @@
 
 
 
-{% content-ref url="README (1).md" %}
-[README (1).md](<README (1).md>)
+{% content-ref url="management/system-basics.md" %}
+[system-basics.md](management/system-basics.md)
 {% endcontent-ref %}
 
 {% content-ref url="firewall-policies/firewall-101.md" %}

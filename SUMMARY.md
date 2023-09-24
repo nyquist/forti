@@ -4,7 +4,7 @@
 
 ## Management
 
-* [System Basics](<README (1).md>)
+* [System Basics](management/system-basics.md)
 * [Logging](management/logging.md)
 
 ## Firewall Policies
