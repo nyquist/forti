@@ -22,3 +22,10 @@
   * [Certificates](ngfw/ssl-inspection/certificates.md)
   * [SSL to a Web Server](ngfw/ssl-inspection/ssl-to-a-web-server.md)
   * [SSL to a Web Server](ngfw/ssl-inspection/ssl-to-a-web-server-1.md)
+
+***
+
+* [Inspection and NGFW Modes](inspection-and-ngfw-modes.md)
+* [Web Filtering](web-filtering/README.md)
+  * [Basic Web Filtering](web-filtering/basic-web-filtering.md)
+  * [Proxy-Based Web Filtering](web-filtering/proxy-based-web-filtering.md)
