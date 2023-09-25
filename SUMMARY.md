@@ -20,12 +20,9 @@
 
 * [SSL Inspection](ngfw/ssl-inspection/README.md)
   * [Certificates](ngfw/ssl-inspection/certificates.md)
-  * [SSL to a Web Server](ngfw/ssl-inspection/ssl-to-a-web-server.md)
-  * [SSL to a Web Server](ngfw/ssl-inspection/ssl-to-a-web-server-1.md)
-
-***
-
-* [Inspection and NGFW Modes](inspection-and-ngfw-modes.md)
-* [Web Filtering](web-filtering/README.md)
-  * [Basic Web Filtering](web-filtering/basic-web-filtering.md)
-  * [Proxy-Based Web Filtering](web-filtering/proxy-based-web-filtering.md)
+  * [SSL to a Web Server without Inspection](ngfw/ssl-inspection/ssl-to-a-web-server-without-inspection.md)
+  * [SSL to a Web Server with Inspection](ngfw/ssl-inspection/ssl-to-a-web-server-with-inspection.md)
+* [Inspection and NGFW Modes](ngfw/inspection-and-ngfw-modes.md)
+* [Web Filtering](ngfw/web-filtering/README.md)
+  * [Basic Web Filtering](ngfw/web-filtering/basic-web-filtering.md)
+  * [Proxy-Based Web Filtering](ngfw/web-filtering/proxy-based-web-filtering.md)
