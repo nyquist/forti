@@ -7,6 +7,7 @@
 * [System Basics](<README (1).md>)
 * [Logging](management/logging.md)
 * [Security Fabric](management/security-fabric.md)
+* [Packet Capture](management/packet-capture.md)
 
 ## Firewall Policies
 
@@ -31,3 +32,7 @@
 * [Antivirus](ngfw/antivirus.md)
 * [IPS/IDS](ngfw/ips-ids/README.md)
   * [DoS Policy](ngfw/ips-ids/dos-policy.md)
+
+## Networking
+
+* [Routing](networking/routing.md)
