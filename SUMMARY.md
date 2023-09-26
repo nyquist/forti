@@ -27,7 +27,6 @@
   * [Basic Web Filtering](ngfw/web-filtering/basic-web-filtering.md)
   * [Proxy-Based Web Filtering](ngfw/web-filtering/proxy-based-web-filtering.md)
 * [Application Control](ngfw/application-control.md)
-
-***
-
-* [Antivirus](antivirus.md)
+* [Antivirus](ngfw/antivirus.md)
+* [IPS/IDS](ngfw/ips-ids/README.md)
+  * [DoS Policy](ngfw/ips-ids/dos-policy.md)
