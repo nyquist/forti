@@ -6,6 +6,7 @@
 
 * [System Basics](<README (1).md>)
 * [Logging](management/logging.md)
+* [Security Fabric](management/security-fabric.md)
 
 ## Firewall Policies
 
