@@ -8,6 +8,7 @@
 * [Logging](management/logging.md)
 * [Security Fabric](management/security-fabric.md)
 * [Packet Capture](management/packet-capture.md)
+* [VDOMs](management/vdoms.md)
 
 ## Firewall Policies
 

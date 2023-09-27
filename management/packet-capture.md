@@ -1,6 +1,8 @@
 # Packet Capture
 
-## Using CLI
+## Packet Capture
+
+### Using CLI
 
 To run a packet capture through CLI, you can use:
 
@@ -25,6 +27,14 @@ Verbosity level map:
 
 Packet captures can be stopped using `Ctrl+C`
 
-## Using GUI
+### Using GUI
 
 The GUI packet capture is only available for models with internal storage.
+
+## Packet Flow Trace
+
+```
+diagnose debug enable
+diagnose debug flow filter addr <IP>
+diagnose debug flow trace start 10
+```
