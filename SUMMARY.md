@@ -9,6 +9,7 @@
 * [Security Fabric](management/security-fabric.md)
 * [Packet Capture](management/packet-capture.md)
 * [VDOMs](management/vdoms.md)
+* [High Availability](management/high-availability.md)
 
 ## Firewall Policies
 
