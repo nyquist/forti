@@ -38,3 +38,4 @@
 
 * [Routing](networking/routing.md)
 * [SSL VPN](networking/ssl-vpn.md)
+* [IPSec VPN](networking/ipsec-vpn.md)
