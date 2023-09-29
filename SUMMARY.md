@@ -10,6 +10,7 @@
 * [Packet Capture](management/packet-capture.md)
 * [VDOMs](management/vdoms.md)
 * [High Availability](management/high-availability.md)
+* [Diagnostics](management/diagnostics.md)
 
 ## Firewall Policies
 
@@ -38,7 +39,7 @@
 
 ## Infrastructure
 
-* [Routing](infrastructure/routing.md)
-* [SSL VPN](infrastructure/ssl-vpn.md)
-* [IPSec VPN](infrastructure/ipsec-vpn.md)
+* [Routing](networking/routing.md)
+* [SSL VPN](networking/ssl-vpn.md)
+* [IPSec VPN](networking/ipsec-vpn.md)
 * [ZTNA](infrastructure/ztna.md)
