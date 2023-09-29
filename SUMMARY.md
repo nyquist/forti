@@ -19,6 +19,7 @@
   * [DNAT](firewall-policies/nat/dnat.md)
 * [User Authentication](firewall-policies/user-authentication/README.md)
   * [Certificate-Based User Authentication](firewall-policies/user-authentication/certificate-based-user-authentication.md)
+  * [FSSO](firewall-policies/user-authentication/fsso.md)
 
 ## NGFW
 
