@@ -36,8 +36,9 @@
 * [IPS/IDS](ngfw/ips-ids/README.md)
   * [DoS Policy](ngfw/ips-ids/dos-policy.md)
 
-## Networking
+## Infrastructure
 
-* [Routing](networking/routing.md)
-* [SSL VPN](networking/ssl-vpn.md)
-* [IPSec VPN](networking/ipsec-vpn.md)
+* [Routing](infrastructure/routing.md)
+* [SSL VPN](infrastructure/ssl-vpn.md)
+* [IPSec VPN](infrastructure/ipsec-vpn.md)
+* [ZTNA](infrastructure/ztna.md)
