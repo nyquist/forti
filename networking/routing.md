@@ -86,6 +86,10 @@ config system interface
 next
 ```
 
+### Asymmetric routing
+
+[https://community.fortinet.com/t5/FortiGate/Technical-Note-How-the-FortiGate-behaves-when-asymmetric-routing/ta-p/198575](https://community.fortinet.com/t5/FortiGate/Technical-Note-How-the-FortiGate-behaves-when-asymmetric-routing/ta-p/198575)
+
 ## Link Health Monitor
 
 This feature is used to detect dead links when the physical connection doesn't report an issue. For this reason, FortiGate can send probes to up to 4 destinations (beacons)
