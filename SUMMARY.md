@@ -7,10 +7,10 @@
 * [System Basics](<README (1).md>)
 * [Logging](management/logging.md)
 * [Security Fabric](management/security-fabric.md)
-* [Packet Capture](management/packet-capture.md)
 * [VDOMs](management/vdoms.md)
 * [High Availability](management/high-availability.md)
-* [Diagnostics](management/diagnostics.md)
+* [Diagnostics](management/diagnostics/README.md)
+  * [Packet Capture](management/diagnostics/packet-capture.md)
 
 ## Firewall Policies
 
