@@ -1,4 +1,4 @@
-# Firewall Policies
+# Firewall 101
 
 A Firewall Policy is a set of rules that define which traffic matches each rule and how the matching traffic is processed. The rules are processed from top to bottom and the traffic is processed by the first matching rule. If no match is found, the traffic is dropped by the "Implicit deny" rule.&#x20;
 
@@ -48,9 +48,15 @@ Schedule can be:
 
 A UUID is created for each firewall policy and firewall object at creation time for easier tracking.  Policy ID is a number value which is assigned at system creation. They are not displayed by default in GUI but it is the identifier used to modify the policy in the CLI. &#x20;
 
+### Session timeout
+
+[https://community.fortinet.com/t5/FortiGate/Technical-Tip-Session-timeout-settings/ta-p/191228](https://community.fortinet.com/t5/FortiGate/Technical-Tip-Session-timeout-settings/ta-p/191228)
+
 ### Logging
 
 A log is created when a sesssion is closed. You can additional add a log message when a session starts.&#x20;
 
 During a session, if a security profile detects a violation, fortigate will log it immediately.
+
+
 
