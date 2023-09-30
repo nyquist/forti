@@ -101,7 +101,7 @@ Because firewall policy is applied before traffic goes through the tunnel, the s
 
 For each selector you must configure a proposal. This includes settings for **Encryption**, **Authentication**, **DH Group.**
 
-Set **Auto-Negotiate** to prevent dropping interesting traffic by negotiating a new key before the old one expires.
+Set **Auto-Negotiate** to prevent dropping interesting traffic by negotiating a new key before the old one expires. If the tunnel goes down, auto-negotiate will try to bring it back up, repeating every 5 seconds until the SA is established. Without it, negotiation will take place only if interesting traffic needs to be encrypted and sent to the peer.
 
 ## Firewall Policies
 
