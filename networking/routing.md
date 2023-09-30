@@ -53,11 +53,11 @@ When SD-WAN is enabled, the ECMP load-balancing algorithm changes from **v4-ecmp
 
 
 
-| v4-ecmp-mode                                                                                         | load-balance-mode                                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <ul><li>source IP</li><li>source-destination IP</li><li>weighted </li><li>usage (spilover)</li></ul> | volume algorithm                                                     |
-| weight is defined in the route                                                                       | weight is defined in the SD-WAN member configuration                 |
-| uses spillover thresholds defined on the interface                                                   | uses spillover thresholds defined in the SD-WAN member configuration |
+| v4-ecmp-mode                                                                                                           | load-balance-mode                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Algorithms:</p><ul><li>source IP</li><li>source-destination IP</li><li>weighted </li><li>usage (spilover)</li></ul> | <p>Algorithms</p><ul><li>souce IP</li><li>source-destsination IP</li><li>sessions (weighted)</li><li>usage (spillover)</li><li>volume algorithm</li></ul> |
+| weight is defined in the route                                                                                         | weight is defined in the SD-WAN member configuration                                                                                                      |
+| uses spillover thresholds defined on the interface                                                                     | uses spillover thresholds defined in the SD-WAN member configuration                                                                                      |
 
 Volume algorithm load balances sessions across members based on the measured interface volume and the member weight.
 
