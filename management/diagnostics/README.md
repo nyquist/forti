@@ -25,6 +25,8 @@ execute ping-options ...
 
 Debug flow can also be used in GUI: **Network>Diagnostics>Debug Flow**. After debug stops, you can also download a packet trace output in CSV format.
 
+[https://docs.fortinet.com/document/fortigate/6.2.3/cookbook/54688/debugging-the-packet-flow](https://docs.fortinet.com/document/fortigate/6.2.3/cookbook/54688/debugging-the-packet-flow)
+
 ### Slowness
 
 It is likely caused by high CPU or memory usage.&#x20;
