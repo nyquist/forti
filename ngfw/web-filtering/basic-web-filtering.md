@@ -24,7 +24,9 @@ The list of entries is checked from top to bottom. Entries can be:
 * wildcard
 * regex
 
-The actions for each entry can beL:
+{% embed url="https://community.fortinet.com/t5/FortiGate/Technical-Tip-URL-Filter-expressions-for-the-FortiGate/ta-p/192746" %}
+
+The actions for each entry can be:
 
 * **Allow**: access is permitted. Traffic is passed to remaining security inspections
 * **Block**: access is denied. A replacement message is sent to the user
