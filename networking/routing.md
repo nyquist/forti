@@ -86,6 +86,8 @@ config system interface
 next
 ```
 
+[https://community.fortinet.com/t5/FortiGate/Technical-Note-Reverse-Path-Forwarding-RPF-implementation-and/ta-p/194382](https://community.fortinet.com/t5/FortiGate/Technical-Note-Reverse-Path-Forwarding-RPF-implementation-and/ta-p/194382)
+
 ### Asymmetric routing
 
 [https://community.fortinet.com/t5/FortiGate/Technical-Note-How-the-FortiGate-behaves-when-asymmetric-routing/ta-p/198575](https://community.fortinet.com/t5/FortiGate/Technical-Note-How-the-FortiGate-behaves-when-asymmetric-routing/ta-p/198575)
