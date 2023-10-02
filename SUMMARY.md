@@ -11,6 +11,7 @@
 * [High Availability](management/high-availability.md)
 * [Diagnostics](management/diagnostics/README.md)
   * [Packet Capture](management/diagnostics/packet-capture.md)
+* [FortiManager](management/fortimanager.md)
 
 ## Firewall Policies
 
