@@ -36,15 +36,25 @@ Admin Profiles
 * System Admin
 * Restricted Admin: Can have access only yo Web filter Profile, IPS Sensor and Application Sensor
 
-Admin operation
+Workspace mode:
 
-* Workspace Mode (default disabled): only one admin at a time can make changes. The lock can be per ADOM, per device or per policy. The admin must lock/unlock the worksapce.
+* disabled (default): admins can make changes without restrictions as long as they have access.
+* Workspace Mode (workspace mode: normal): only one admin at a time can make changes. The lock can be per ADOM, per device or per policy. The admin must lock/unlock the worksapce.
+* Workflow Mode (workspace mode: workflow): Admins must create sessions to change the policy. Another admin must approve before the change can be installed on a device.&#x20;
+
+ADOM Revisions create a snapshot of all policy and objects configurations for the ADOM. Revisions can be locked to prevent deletion
+
+
 
 
 
 ## Log Collection
 
-FortiManager can act as a log collector for FortiGate devices, but it has less functionality and capacity than FortiAnalyzer. FortiManager can manage FortiAnalyzer and provides a unified view to the users.
+FortiManager can act as a log collector for FortiGate devices, but it has less functionality and capacity than&#x20;
+
+
+
+FortiAnalyzer. FortiManager can manage FortiAnalyzer and provides a unified view to the users.
 
 ## FortiManager Ports
 
@@ -85,6 +95,9 @@ FortiManager can act as a log collector for FortiGate devices, but it has less f
   * From FMG, using the wizard for offlince device: Add Model Device. Can link device by SN or PSK. Requires FMG IP to be defined on FortiGate
   * From FortiGate, via registration requests: Requests appear
   * A VDOM counts as one device. A FortiGate HA cluster counts as one device.&#x20;
+  * **FortiManager behind a NAT device**: only FortiManager can discover the device. It is recommended to setup the NAT IP as the FMG IP on the device
+  * **FortiGate behind a NAT device**: FortiManager can discover the device through the NAT IP but it won't try to reestablish connection automatically if it is disconnected
+  * **Both devices behind NAT**: Similar to FortiManager behind NAT
 * **Scripting**:
   * CLI
   * TCL - must be enabled via CLI
@@ -92,7 +105,10 @@ FortiManager can act as a log collector for FortiGate devices, but it has less f
     * device database
     * policy packages
     * Remote FG directly
-* **Managed devices status:**
+
+### Configuration Management
+
+* **Managed devices configuration:**
   * Synchronized/Auto Update
   * Modified: Modified on FMG, not pushed to device
   * Out of Sync: Modified on FM, not synced with FMG
@@ -103,4 +119,26 @@ FortiManager can act as a log collector for FortiGate devices, but it has less f
   * Quick install - no preview option
 * **Config Revisions**
   * Reverting to a previous revision will revert the device database to the previous version. Then an install is needed
+* **Recovery logic**:
+  * FortiManager sends both set and unset commands to FortiGate. If connection to FortiManager fails, FortiGate applies the unset commands after 15 minutes.
+  * If the configuration still fails after unsetting, then the FortiGate can reboot (can be enabled in FMG CLI) to recover the previous working configuration
+
+### Policy Management
+
+* Each ADOM has a common object database
+* Each policy has an instalation target which defines the list of devices it applies to. There is also the option to define the target per policy entry so that a policy package can be shared among multiple devices.
+* Dynamic Objects give the possibility to map one logical object to a unique definition per device
+* Normalized interfaces give the possibility to map logical interface names to physical interfaces of the device
+* Policy Check can provide recommandations for improveming the policy
+* Policy Package status:
+  * Imported
+  * Synchronized
+  * Never installed
+  * Modified
+  * Out of Sync
+  * Conflict
+  * Unknown
+* Policy Package can be installed through install wizard. Re-install option will still give the preview option.
+
+
 
