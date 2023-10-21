@@ -12,6 +12,8 @@
 * [Diagnostics](management/diagnostics/README.md)
   * [Packet Capture](management/diagnostics/packet-capture.md)
 * [FortiManager](management/fortimanager.md)
+* [Forti Analyzer](management/forti-analyzer/README.md)
+  * [Datasets and SQL](management/forti-analyzer/datasets-and-sql.md)
 
 ## Firewall Policies
 
