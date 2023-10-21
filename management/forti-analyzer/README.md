@@ -97,7 +97,7 @@ Playbooks Dashboard: tracks executed playbooks.
 
 **Outbreak detection service** is a licensed feature that allows FortiAnalyzr admins to receive outbreak alerts, event handlers and reports from FortiGuard.
 
-## Reports
+### Reports
 
 Reports are sets of data organized as charts. A chart consists of [Datasets ](datasets-and-sql.md)and Formats (table, chart, etc)
 
